@@ -29,7 +29,7 @@ var Room = {
 		'cart': {
 			name: _('cart'),
 			button: null,
-			maximum: 1,
+			maximum: 10,
 			availableMsg: _('builder says she can make a cart for carrying wood'),
 			buildMsg: _('the rickety cart will carry more wood from the forest'),
 			type: 'building',
@@ -43,7 +43,7 @@ var Room = {
 		'hut': {
 			name: _('hut'),
 			button: null,
-			maximum: 20,
+			maximum: 200,
 			availableMsg: _("builder says there are more wanderers. says they'll work, too."),
 			buildMsg: _('builder puts up a hut, out in the forest. says word will get around.'),
 			maxMsg: _('no more room for huts.'),
@@ -249,7 +249,7 @@ var Room = {
 			name: _('wagon'),
 			button: null,
 			type: 'upgrade',
-			maximum: 1,
+			maximum: 10,
 			buildMsg: _('the wagon can carry a lot of supplies'),
 			cost: function () {
 				return {
@@ -263,7 +263,7 @@ var Room = {
 			name: _('convoy'),
 			button: null,
 			type: 'upgrade',
-			maximum: 1,
+			maximum: 10,
 			buildMsg: _('the convoy can haul mostly everything'),
 			cost: function () {
 				return {
@@ -594,7 +594,7 @@ var Room = {
 			$SM.add('game.builder.level', 1);
 			$SM.setIncome('builder', {
 				delay: 10,
-				stores: { 'wood': 2 }
+				stores: { 'wood': 100 }
 			});
 			Room.updateIncomeView();
 			Notifications.notify(Room, _("the stranger is standing by the fire. she says she can help. says she builds things."));
